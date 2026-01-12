@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Vishal V - Personal Portfolio</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        .form-message {
+            display: none;
+            padding: 10px;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+        .form-message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .form-message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .service-item:hover .bg-icon {
+            background-color: #0d6efd !important;
+            transition: all 0.3s ease;
+        }
+        .service-item:hover .bg-icon i {
+            color: white !important;
+        }
+        
+        /*Contact me*/
+      
+.contact-info {
+    border-left: 5px solid #333;
+    border-radius: 16px;
+}
+
+.contact-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.icon-box {
+    width: 48px;
+    height: 48px;
+    background: #e7f1ff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-size: 18px;
+}
+
+.social-btn {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 18px;
+}
+
+.social-btn:hover {
+    background: #ffffffc0;
+    transform: translateY(-4px);
+}
+        /* Typing animation styles */
+        .typed-cursor {
+            font-size: 2.5rem;
+            color: #0d6efd;
+            opacity: 1;
+            animation: blink 0.7s infinite;
+        }
+        
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        
+        .typed-text-output {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #333;
+            min-height: 60px;
+            display: inline-block;
+        }
+        
+        @media (max-width: 768px) {
+            .typed-text-output {
+                font-size: 2rem;
+                min-height: 50px;
+            }
+            .typed-cursor {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebar" data-bs-offset="51">
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center" style="z-index: 9999;">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Sidebar Navigation Start -->
+    <nav id="sidebar" class="sidebar-nav">
+        <ul class="sidebar-menu">
+            <li>
+                <a href="#home" class="nav-link active" data-bs-toggle="tooltip" data-bs-placement="right">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="#about" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right">
+                    <i class="fas fa-user"></i>
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="#skill" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right">
+                    <i class="fas fa-cog"></i>
+                    <span>Skills</span>
+                </a>
+            </li>
+            <li>
+                <a href="#service" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Services</span>
+                </a>
+            </li>
+            <li>
+                <a href="#project" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right">
+                    <i class="fas fa-folder"></i>
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="#contact" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Sidebar Navigation End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-light my-6 mt-0" id="home">
+        <div class="container">
+          <div class="row g-5 align-items-center">
+      
+            <!-- Text Section -->
+            <div class="col-lg-6 py-6 pb-0 pt-lg-0 ps-lg-5">
+              <h3 class="text-primary mb-3">I'm</h3>
+              <h1 class="display-3 mb-3">Vishal V</h1>
+      
+              <!-- Typing Animation -->
+              <div class="typing-container mb-4">
+                <h2 class="typed-text-output d-inline"></h2>
+                <span class="typed-cursor"></span>
+              </div>
+      
+              <div class="d-flex align-items-center pt-5">
+                <a href="img/Vishal-Resume.....pdf" class="btn btn-primary py-3 px-4 me-3">
+                  Download CV
+                </a>
+      
+                <a href="https://github.com/vishal-vinayagam" target="_blank"
+                   class="btn btn-square btn-primary me-2" title="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+      
+                <a href="https://www.linkedin.com/in/vishal-v-053a9128b/" target="_blank"
+                   class="btn btn-square btn-primary me-2" title="LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+      
+            <!-- Image Section -->
+            <div class="col-lg-6">
+              <img class="img-fluid" src="img/profile.png" alt="Vishal V - Web Developer">
+            </div>
+      
+          </div>
+        </div>
+      </div>
+      
+    <!-- Header End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-6" id="about">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="d-flex align-items-center mb-5">
+                        <div class="years flex-shrink-0 text-center me-4">
+                            <h1 class="display-1 mb-0">BCA</h1>
+                            <h5 class="mb-0">Final Year</h5>
+                        </div>
+                        
+                    </div>
+                    <p class="mb-4">Passionate web developer and UI/UX designer with expertise in creating modern, responsive web applications. Currently in my final year of BCA, I specialize in front-end development, user interface design, and building intuitive digital experiences.</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Creative Problem Solver</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Modern Web Technologies</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>User-Centered Design</p>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-6">
+                            <img class="img-fluid rounded" src="img/about-1.jpg" alt="About Vishal">
+                        </div>
+                        <div class="col-sm-6">
+                            <img class="img-fluid rounded" src="img/about-2.jpg" alt="Vishal's Work">
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <h5 class="border-end pe-3 me-3 mb-0">Projects Completed</h5>
+                        <h2 class="text-primary fw-bold mb-0" id="project-counter">0</h2>
+                    </div>
+                    <p class="mb-4">I've completed multiple projects including Trip Planner, Tourism portals, Fitness Dashboards, and various UI/UX designs.</p>
+                    <div class="d-flex align-items-center mb-3">
+                        <h5 class="border-end pe-3 me-3 mb-0">Certifications</h5>
+                        <h2 class="text-primary fw-bold mb-0" id="certification-counter">0</h2>
+                    </div>
+                    <p class="mb-0">Earned certifications in IoT, UI/UX Design, JavaScript, Python, C#, AI, and Microsoft Azure AI.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Expertise Start -->
+    <div class="container-xxl py-6" id="skill">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="display-5 mb-5">Skills & Experience</h1>
+                    <p class="mb-4">My technical expertise spans across programming languages, design tools, and development technologies. Here's an overview of my skills and experience.</p>
+                    <h3 class="mb-4">My Skills</h3>
+                    <div class="mb-4">
+                        <button class="btn btn-outline-primary me-2 mb-2 skill-category-btn active" data-category="all">All</button>
+                        <button class="btn btn-outline-primary me-2 mb-2 skill-category-btn" data-category="programming">Programming Languages</button>
+                        <button class="btn btn-outline-primary me-2 mb-2 skill-category-btn" data-category="design">Design</button>
+                        <button class="btn btn-outline-primary me-2 mb-2 skill-category-btn" data-category="tools">Tools</button>
+                    </div>
+                    <div class="skills-container">
+                        <div class="skill-category active" data-category="all">
+                            <div class="skill-buttons">
+                                <button class="btn btn-primary skill-btn mb-2 me-2">Java</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">Python</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">C++</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">C#</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">JavaScript</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">SQL</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">HTML</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">CSS</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">React</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">jQuery</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">Figma</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">Adobe</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">GitHub</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">Git</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">VS Code</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">Canva</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">AI Tools</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">Excel</button>
+                            </div>
+                        </div>
+                        <div class="skill-category" data-category="programming">
+                            <div class="skill-buttons">
+                                <button class="btn btn-primary skill-btn mb-2 me-2">Java</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">Python</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">C++</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">C</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">JavaScript</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">C#</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">SQL</button>
+                            </div>
+                        </div>
+                        <div class="skill-category" data-category="design">
+                            <div class="skill-buttons">
+                                <button class="btn btn-primary skill-btn mb-2 me-2">HTML</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">CSS</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">React</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">jQuery</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">Figma</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">Adobe</button>
+                            </div>
+                        </div>
+                        <div class="skill-category" data-category="tools">
+                            <div class="skill-buttons">
+                                <button class="btn btn-primary skill-btn mb-2 me-2">Git</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">GitHub</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">VS Code</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">Canva</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">AI Tools</button>
+                                <button class="btn btn-primary skill-btn mb-2 me-2">Excel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <ul class="nav nav-pills rounded border border-2 border-primary mb-4">
+                        <li class="nav-item w-50">
+                            <button class="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill" href="#tab-certifications">Certifications</button>
+                        </li>
+                        <li class="nav-item w-50">
+                            <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill" href="#tab-education">Education</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab-certifications" class="tab-pane fade show p-0 active">
+                            <div id="certification-description" class="mb-4 p-3 bg-light rounded" style="display: none;">
+                                <h6 class="mb-2 fw-bold" id="cert-skill-name"></h6>
+                                <p class="mb-0 text-muted" id="cert-skill-desc"></p>
+                            </div>
+                            <div class="certifications-container" style="max-height: 400px; overflow-y: auto; overflow-x: hidden;">
+                                <div class="row g-3" id="certifications-grid">
+                                    <!-- Certifications will be loaded here -->
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-education" class="tab-pane fade show p-0">
+                            <div class="row gy-5 gx-4">
+                                <div class="col-sm-12">
+                                    <h5>Bachelor of Computer Applications (BCA)</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">Pursuing (Final Year)</p>
+                                    <h6 class="mb-0">Terf's Academy College of Arts & Science</h6>
+                                </div>
+                                <div class="col-sm-12">
+                                    <h5>Higher Secondary Certificate (HSC)</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">Completed in 2023</p>
+                                    <h6 class="mb-0">VK Govt. Hr. Sec. School</h6>
+                                </div>
+                                <div class="col-sm-12">
+                                    <h5>Secondary School Leaving Certificate (SSLC)</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">Completed in 2021</p>
+                                    <h6 class="mb-0">VK Govt. Hr. Sec. School</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Expertise End -->
+
+
+    <!-- Service Start -->
+    <div class="container-fluid bg-light py-6" id="service">
+        <div class="container">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">My Services</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a class="btn btn-primary py-3 px-5" href="#contact">Hire Me</a>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3" style="background-color: #e7f1ff; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 10px;">
+                            <i class="fa fa-crop-alt fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Creative Design</h4>
+                            <span>Creating visually appealing and innovative designs that capture attention and communicate brand messages effectively. Focus on unique concepts, color theory, and visual storytelling.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3" style="background-color: #e7f1ff; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 10px;">
+                            <i class="fa fa-paint-brush fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Graphic Design</h4>
+                            <span>Professional graphic design services including logos, branding materials, marketing collateral, social media graphics, and print design. Delivering compelling visual solutions.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3" style="background-color: #e7f1ff; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 10px;">
+                            <i class="fa fa-code fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Web Design</h4>
+                            <span>Designing responsive, user-friendly websites with modern aesthetics and optimal functionality. Focus on clean layouts, intuitive navigation, and cross-device compatibility.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3" style="background-color: #e7f1ff; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 10px;">
+                            <i class="fa fa-laptop-code fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">UI/UX Design</h4>
+                            <span>Creating seamless user experiences and intuitive interfaces. Conducting user research, wireframing, prototyping, and usability testing to deliver optimal digital products.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Projects Start -->
+    <div class="container-xxl py-6 pt-5" id="project">
+        <div class="container">
+            <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">My Projects</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <ul class="list-inline mx-n3 mb-0" id="portfolio-flters">
+                        <li class="mx-3 active" data-filter="*">All Projects</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 portfolio-item">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-1.jpg" alt="AI Chat Application">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1 preview-btn" href="img/project-1.jpg" data-lightbox="portfolio" data-project="AI Chat Application"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/vishal-vinayagam/AI-CHAT" target="_blank"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-2.jpg" alt="Bird Game">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1 preview-btn" href="img/project-2.jpg" data-lightbox="portfolio" data-project="Bird Game"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/vishal-vinayagam/Bird-Game" target="_blank"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-3.jpg" alt="Dino Game Clone">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1 preview-btn" href="img/project-3.jpg" data-lightbox="portfolio" data-project="Dino Game Clone"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/vishal-vinayagam/Running-T-Rex" target="_blank"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-4.jpg" alt="Happy Cards">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1 preview-btn" href="img/project-4.jpg" data-lightbox="portfolio" data-project="Happy Cards"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/vishal-vinayagam/Happy-Cards---Create-Beautiful-Invitations" target="_blank"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-5.jpg" alt="The Mug">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1 preview-btn" href="img/project-5.jpg" data-lightbox="portfolio" data-project="The Mug"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/vishal-vinayagam/The-mug" target="_blank"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-6.jpg" alt="MediCare Smart Medication Reminder">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1 preview-btn" href="img/project-6.jpg" data-lightbox="portfolio" data-project="MediCare Smart Medication Reminder"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/vishal-vinayagam/MediCare---Smart-Medication-Reminder" target="_blank"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Projects End -->
+
+
+    <!-- Contact Start -->
+    <div class="container-xxl pb-5" id="contact">
+        <div class="container py-5">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">Let's Work Together</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a class="btn btn-primary py-3 px-5" href="#contact">Say Hello</a>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="contact-info bg-white shadow-sm p-4 p-lg-5 h-100">
+
+                        <h3 class="mb-3 fw-bold">Get In Touch</h3>
+<p class="text-muted mb-4">
+    Feel free to reach out for projects, collaborations, or just a friendly hello 👋
+</p>
+
+<div class="contact-box">
+    <div class="icon-box">
+        <i class="fas fa-phone"></i>
+    </div>
+    <div>
+        <small class="text-muted">Call me</small>
+        <h6 class="fw-bold mb-0">+91 93454 57411</h6>
+    </div>
+</div>
+
+<div class="contact-box">
+    <div class="icon-box">
+        <i class="fas fa-envelope"></i>
+    </div>
+    <div>
+        <small class="text-muted">Email</small>
+        <h6 class="fw-bold mb-0">v.vishall22005@gmail.com</h6>
+    </div>
+</div>
+
+<div class="mt-4">
+    <p class="text-muted fw-semibold mb-3">Follow me</p>
+    <div class="d-flex gap-3 flex-wrap">
+        <a class="social-btn" href="https://github.com/vishal-vinayagam" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+        <a class="social-btn" href="https://www.linkedin.com/in/vishal-v-053a8128b/" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a class="social-btn" href="https://www.hackerrank.com/v_vishall22005" target="_blank" title="HackerRank">
+            <i class="fab fa-hackerrank"></i>
+        </a>
+        <a class="social-btn" href="https://www.naukri.com/code360/profile/35b316e7-e1d7-4bcc-b810-cbc393585d97" target="_blank" title="Naukri">
+            <i class="fas fa-briefcase"></i>
+        </a>
+    </div>
+</div>
+
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="contact-form bg-white rounded p-4 p-lg-5 h-100">
+                        <h3 class="mb-4">Send Message</h3>
+                        <div id="form-message" class="form-message"></div>
+                        <form id="contact-form" action="https://formspree.io/f/xkgwbgwa" method="POST">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                                        <label for="name">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                                        <label for="email">Your Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+                                        <label for="subject">Subject</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 150px" required></textarea>
+                                        <label for="message">Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary py-3 px-5" type="submit" id="submit-btn">
+                                        <span id="submit-text">Send Message</span>
+                                        <span id="submit-spinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid bg-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    &copy; <span class="fw-bold">Vishal</span>, All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Hide spinner when page loads
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const spinner = document.getElementById('spinner');
+                if (spinner) {
+                    spinner.classList.remove('show');
+                }
+            }, 500);
+        });
+
+        // Counter animation for projects and certifications
+        function animateCounter(elementId, targetValue, duration = 2000) {
+            const element = document.getElementById(elementId);
+            if (!element) return;
+            
+            const startValue = 0;
+            const increment = targetValue / (duration / 16);
+            let currentValue = startValue;
+            
+            const timer = setInterval(() => {
+                currentValue += increment;
+                if (currentValue >= targetValue) {
+                    currentValue = targetValue;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(currentValue);
+            }, 16);
+        }
+
+        // Custom Typing Animation to fix speed issues
+        function initTypingAnimation() {
+            const typedTextOutput = document.querySelector('.typed-text-output');
+            if (!typedTextOutput) return;
+            
+            const texts = ['Web Developer', 'UI/UX Designer', 'Front End Developer'];
+            let textIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            let isEnd = false;
+            
+            function type() {
+                const currentText = texts[textIndex];
+                
+                if (isDeleting) {
+                    typedTextOutput.textContent = currentText.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    typedTextOutput.textContent = currentText.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+                
+                if (!isDeleting && charIndex === currentText.length) {
+                    isEnd = true;
+                    isDeleting = true;
+                    setTimeout(type, 1500); // Pause at end
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    textIndex++;
+                    if (textIndex >= texts.length) textIndex = 0;
+                    setTimeout(type, 500); // Pause before next word
+                } else {
+                    const speed = isDeleting ? 100 : 150;
+                    setTimeout(type, speed);
+                }
+            }
+            
+            // Start typing animation
+            setTimeout(type, 1000);
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Start typing animation
+            initTypingAnimation();
+            
+            // Animate counters
+            setTimeout(() => {
+                animateCounter('project-counter', 30);
+                animateCounter('certification-counter', 40);
+            }, 1000);
+
+            // Skill category filtering
+            const skillCategoryBtns = document.querySelectorAll('.skill-category-btn');
+            const skillCategories = document.querySelectorAll('.skill-category');
+            
+            skillCategoryBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+                    
+                    // Update active button
+                    skillCategoryBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show/hide skill categories
+                    skillCategories.forEach(cat => {
+                        if (cat.getAttribute('data-category') === category || category === 'all') {
+                            cat.classList.add('active');
+                        } else {
+                            cat.classList.remove('active');
+                        }
+                    });
+                });
+            });
+
+            // Form submission handler with Formspree
+            const contactForm = document.getElementById('contact-form');
+            const formMessage = document.getElementById('form-message');
+            const submitBtn = document.getElementById('submit-btn');
+            const submitText = document.getElementById('submit-text');
+            const submitSpinner = document.getElementById('submit-spinner');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    // Show spinner
+                    submitText.classList.add('d-none');
+                    submitSpinner.classList.remove('d-none');
+                    submitBtn.disabled = true;
+                    
+                    // Get form data
+                    const formData = new FormData(this);
+                    
+                    try {
+                        // Send to Formspree
+                        const response = await fetch(this.action, {
+                            method: 'POST',
+                            body: formData,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        });
+                        
+                        // Hide spinner
+                        submitText.classList.remove('d-none');
+                        submitSpinner.classList.add('d-none');
+                        submitBtn.disabled = false;
+                        
+                        if (response.ok) {
+                            // Show success message
+                            formMessage.textContent = 'Thank you for your message! I have received it and will get back to you soon.';
+                            formMessage.className = 'form-message success';
+                            formMessage.style.display = 'block';
+                            
+                            // Clear form
+                            contactForm.reset();
+                            
+                            // Hide message after 5 seconds
+                            setTimeout(() => {
+                                formMessage.style.display = 'none';
+                            }, 5000);
+                        } else {
+                            // Show error message
+                            formMessage.textContent = 'There was an error sending your message. Please try again or contact me directly at v.vishall22005@gmail.com';
+                            formMessage.className = 'form-message error';
+                            formMessage.style.display = 'block';
+                        }
+                    } catch (error) {
+                        // Hide spinner
+                        submitText.classList.remove('d-none');
+                        submitSpinner.classList.add('d-none');
+                        submitBtn.disabled = false;
+                        
+                        // Show error message
+                        formMessage.textContent = 'Network error. Please check your connection and try again.';
+                        formMessage.className = 'form-message error';
+                        formMessage.style.display = 'block';
+                    }
+                });
+            }
+
+            // Initialize tooltips
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+
+            // Initialize Wow.js
+            new WOW().init();
+
+            // Load certifications data
+            const certifications = [
+                { name: "JavaScript", description: "Advanced JavaScript concepts and modern ES6+ features" },
+                { name: "Python", description: "Python programming and data structures certification" },
+                { name: "UI/UX Design", description: "User Interface and User Experience design principles" },
+                { name: "Microsoft Azure AI", description: "AI fundamentals and Azure AI services" },
+                { name: "IoT", description: "Internet of Things fundamentals and applications" },
+                { name: "C#", description: "C# programming and .NET framework" },
+                { name: "Web Development", description: "Full-stack web development certification" },
+                { name: "React JS", description: "React library for building user interfaces" },
+                { name: "SQL", description: "Database management and SQL queries" },
+                { name: "HTML/CSS", description: "Front-end web development fundamentals" }
+            ];
+
+            const certificationsGrid = document.getElementById('certifications-grid');
+            if (certificationsGrid) {
+                certifications.forEach(cert => {
+                    const col = document.createElement('div');
+                    col.className = 'col-6';
+                    col.innerHTML = `
+                        <div class="certification-item p-3 border rounded bg-white">
+                            <h6 class="mb-1">${cert.name}</h6>
+                            <small class="text-muted">${cert.description}</small>
+                        </div>
+                    `;
+                    certificationsGrid.appendChild(col);
+                });
+            }
+
+            // Add project count based on actual portfolio items
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            animateCounter('project-counter', portfolioItems.length || 30);
+        });
+
+ 
+    </script>
+</body>
+
+</html>
